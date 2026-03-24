@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLEOR — Toujours Nous</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── CURSEUR ─── -->
+<div class="cursor"      id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav id="navbar">
+  <a href="#" class="nav-logo">CLEOR</a>
+  <ul class="nav-links">
+    <li><a href="#chapitres">Chapitres</a></li>
+    <li><a href="#produits">Collection</a></li>
+    <li><a href="#film">Film</a></li>
+    <li><a href="#communaute">#ToujoursNous</a></li>
+    <li><a href="#newsletter">S'inscrire</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-lines"></div>
+  <div class="float-ring"></div>
+  <div class="float-ring"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Campagne — Printemps 2025</p>
+    <h1 class="hero-title">Toujours<br><span>Nous</span></h1>
+    <p class="hero-subtitle">Un bijou pour chaque chapitre.</p>
+    <div class="hero-divider"></div>
+    <p class="hero-scroll">Découvrir</p>
+  </div>
+
+  <!-- Diamant décoratif SVG -->
+  <svg class="hero-diamond"
+       viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg"
+       style="animation: diamondPulse 4s ease-in-out infinite;">
+    <g style="animation: diamondSpin 30s linear infinite; transform-origin: 140px 140px;">
+      <polygon points="140,20 240,100 200,260 80,260 40,100" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+      <polygon points="140,60 210,120 180,230 100,230 70,120" fill="none" stroke="rgba(201,168,76,0.25)" stroke-width="0.5"/>
+    </g>
+    <polygon points="140,40 220,110 190,240 90,240 60,110" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+    <polygon points="140,80 190,130 170,210 110,210 90,130" fill="rgba(201,168,76,0.03)" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+    <line x1="140" y1="40" x2="60"  y2="110" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+    <line x1="140" y1="40" x2="220" y2="110" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+    <line x1="60"  y1="110" x2="90"  y2="130" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
+    <line x1="220" y1="110" x2="190" y2="130" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
+    <circle cx="140" cy="140" r="6"  fill="rgba(201,168,76,0.6)"/>
+    <circle cx="140" cy="140" r="20" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+  </svg>
+</section>
+<section id="insight">
+  <div class="section-inner">
+    <p class="section-label reveal">Insight</p>
+    <blockquote class="insight-text reveal" style="transition-delay:.15s">
+      "Un bijou accompagne <strong>toute une relation</strong>,<br>
+      pas seulement son début."
+    </blockquote>
+    <p class="insight-author reveal" style="transition-delay:.25s">— CLEOR, Toujours Nous 2025</p>
+    <div class="gold-line reveal" style="transition-delay:.3s"></div>
+  </div>
+</section>
+
+<div class="parallax-sep"></div>
+<section id="chapitres">
+  <div class="section-inner">
+
+    <div class="chapitres-header reveal">
+      <div class="week-badge">✦ Semaine 4 sur 6 — Chapitre en cours</div>
+      <p class="section-label">La Campagne</p>
+      <h2 class="chapitres-title">
+        Six chapitres.<br>
+        Une seule <span>vérité</span>.
+      </h2>
+    </div>
+    <div class="countdown-section reveal">
+      <p class="countdown-label">Prochain chapitre dans</p>
+      <div class="countdown-timer">
+        <div class="timer-unit">
+          <span class="timer-num" id="days">04</span>
+          <span class="timer-unit-label">Jours</span>
+        </div>
+        <span class="timer-sep">:</span>
+        <div class="timer-unit">
+          <span class="timer-num" id="hours">17</span>
+          <span class="timer-unit-label">Heures</span>
+        </div>
+        <span class="timer-sep">:</span>
+        <div class="timer-unit">
+          <span class="timer-num" id="minutes">32</span>
+          <span class="timer-unit-label">Minutes</span>
+        </div>
+        <span class="timer-sep">:</span>
+        <div class="timer-unit">
+          <span class="timer-num" id="seconds">09</span>
+          <span class="timer-unit-label">Secondes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chapitres-grid">
+
+      <div class="chapitre-card reveal" onclick="openModal('ch1')">
+        <div class="card-img c1"></div>
+        <div class="card-number">01</div>
+        <div class="card-overlay"><button class="card-overlay-btn">Explorer</button></div>
+        <div class="card-info">
+          <p class="card-chapitre">Chapitre I</p>
+          <h3 class="card-title">La Promesse</h3>
+          <p class="card-desc">Là où tout commence. Un regard, un instant, une décision silencieuse.</p>
+        </div>
+      </div>
+
+      <div class="chapitre-card reveal" style="transition-delay:.1s" onclick="openModal('ch2')">
+        <div class="card-img c2"></div>
+        <div class="card-number">02</div>
+        <div class="card-overlay"><button class="card-overlay-btn">Explorer</button></div>
+        <div class="card-info">
+          <p class="card-chapitre">Chapitre II</p>
+          <h3 class="card-title">L'Amour</h3>
+          <p class="card-desc">La douceur des jours qui se ressemblent. Le bijou comme premier témoin.</p>
+        </div>
+      </div>
+
+      <div class="chapitre-card reveal" style="transition-delay:.2s" onclick="openModal('ch3')">
+        <div class="card-img c3"></div>
+        <div class="card-number">03</div>
+        <div class="card-overlay"><button class="card-overlay-btn">Explorer</button></div>
+        <div class="card-info">
+          <p class="card-chapitre">Chapitre III</p>
+          <h3 class="card-title">La Dispute</h3>
+          <p class="card-desc">Le chaos et la tension. Ce que l'on garde malgré tout.</p>
+        </div>
+      </div>
+
+      <div class="chapitre-card reveal" style="transition-delay:.3s; outline:1px solid rgba(201,168,76,0.4);" onclick="openModal('ch4')">
+        <div class="card-img c4"></div>
+        <div class="card-number">04</div>
+        <div class="card-overlay"><button class="card-overlay-btn">Explorer</button></div>
+        <div class="card-info">
+          <p class="card-chapitre" style="color:var(--or-pale)">★ En cours — Chapitre IV</p>
+          <h3 class="card-title">Le Silence</h3>
+          <p class="card-desc">Le vide entre deux êtres. Ce que le bijou retient quand les mots manquent.</p>
+        </div>
+      </div>
+
+      <div class="chapitre-card locked reveal" style="transition-delay:.4s">
+        <div class="card-img c5"></div>
+        <div class="card-number">05</div>
+        <div class="lock-overlay">
+          <span class="lock-icon">◈</span>
+          <span class="lock-label">Chapitre V</span>
+          <span class="lock-date">Disponible le 14 avr.</span>
+        </div>
+        <div class="card-info">
+          <p class="card-chapitre">Chapitre V</p>
+          <h3 class="card-title">Le Retour</h3>
+        </div>
+      </div>
+
+      <div class="chapitre-card locked reveal" style="transition-delay:.5s">
+        <div class="card-img c6"></div>
+        <div class="card-number">06</div>
+        <div class="lock-overlay">
+          <span class="lock-icon">◈</span>
+          <span class="lock-label">Chapitre VI</span>
+          <span class="lock-date">Disponible le 21 avr.</span>
+        </div>
+        <div class="card-info">
+          <p class="card-chapitre">Chapitre VI</p>
+          <h3 class="card-title">Toujours Nous</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="parallax-sep"></div>
+
+<section id="produits">
+  <div class="section-inner">
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px">
+      <div class="produits-intro reveal-left">
+        <p class="section-label">Collection Exclusive</p>
+        <h2 class="section-heading">Les bijoux<br>du <span class="or">chapitre</span></h2>
+        <p>Chaque semaine, de nouvelles pièces de la collection <em>Toujours Nous</em>
+           font leur apparition — liées au chapitre révélé.
+           Des créations qui portent l'émotion avant la forme.</p>
+      </div>
+      <div class="reveal-right">
+        <button class="btn-or"><span>Voir toute la collection</span></button>
+      </div>
+    </div>
+
+    <div class="produits-grid">
+
+      <div class="produit-card reveal" style="transition-delay:.05s">
+        <div class="produit-img-wrap">
+          <div class="produit-visual">
+            <svg viewBox="0 0 200 200" width="160" height="160">
+              <defs><radialGradient id="g1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#e8d5a3" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.3"/>
+              </radialGradient></defs>
+              <ellipse cx="100" cy="100" rx="60" ry="20" fill="none" stroke="url(#g1)" stroke-width="2"/>
+              <ellipse cx="100" cy="100" rx="40" ry="13" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="1"/>
+              <circle cx="100" cy="100" r="8" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" stroke-width="1"/>
+              <line x1="60" y1="87" x2="100" y2="75" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+              <line x1="140" y1="87" x2="100" y2="75" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+              <line x1="100" y1="75" x2="100" y2="55" stroke="rgba(201,168,76,0.5)" stroke-width="1"/>
+              <circle cx="100" cy="52" r="5" fill="rgba(201,168,76,0.6)" stroke="#c9a84c" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="produit-badge new">Nouveau</span>
+        </div>
+        <p class="produit-chapitre">Chapitre IV — Le Silence</p>
+        <h3 class="produit-name">Collier "L'Absent"</h3>
+        <p class="produit-matiere">Or jaune 18 carats · Diamants</p>
+        <p class="produit-prix">1 290 €</p>
+        <div class="produit-action"><span>Découvrir</span></div>
+      </div>
+
+      <div class="produit-card reveal" style="transition-delay:.1s">
+        <div class="produit-img-wrap">
+          <div class="produit-visual">
+            <svg viewBox="0 0 200 200" width="160" height="160">
+              <defs><radialGradient id="g2" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#b0b8c8"/>
+                <stop offset="100%" stop-color="#4a5568" stop-opacity="0.3"/>
+              </radialGradient></defs>
+              <circle cx="100" cy="100" r="55" fill="none" stroke="url(#g2)" stroke-width="2"/>
+              <circle cx="100" cy="100" r="38" fill="none" stroke="rgba(176,184,200,0.4)" stroke-width="1"/>
+              <polygon points="100,65 115,90 145,95 125,114 130,144 100,128 70,144 75,114 55,95 85,90"
+                       fill="rgba(176,184,200,0.1)" stroke="rgba(176,184,200,0.5)" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+        <p class="produit-chapitre">Chapitre III — La Dispute</p>
+        <h3 class="produit-name">Bague "Fracture"</h3>
+        <p class="produit-matiere">Argent 925 · Rubis</p>
+        <p class="produit-prix">490 €</p>
+        <div class="produit-action"><span>Découvrir</span></div>
+      </div>
+
+      <div class="produit-card reveal" style="transition-delay:.15s">
+        <div class="produit-img-wrap">
+          <div class="produit-visual">
+            <svg viewBox="0 0 200 200" width="160" height="160">
+              <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#8b6914" stop-opacity="0.4"/>
+              </linearGradient></defs>
+              <rect x="70" y="60" width="60" height="80" rx="4" fill="none" stroke="url(#g3)" stroke-width="2"/>
+              <rect x="80" y="70" width="40" height="60" rx="2" fill="rgba(201,168,76,0.05)" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+              <circle cx="100" cy="100" r="16" fill="rgba(201,168,76,0.15)" stroke="#c9a84c" stroke-width="1.5"/>
+              <line x1="90" y1="55" x2="90" y2="45" stroke="rgba(201,168,76,0.5)" stroke-width="2"/>
+              <line x1="110" y1="55" x2="110" y2="45" stroke="rgba(201,168,76,0.5)" stroke-width="2"/>
+              <path d="M88 45 Q100 38 112 45" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="2"/>
+            </svg>
+          </div>
+          <span class="produit-badge">Bestseller</span>
+        </div>
+        <p class="produit-chapitre">Chapitre I — La Promesse</p>
+        <h3 class="produit-name">Pendentif "Premier Vœu"</h3>
+        <p class="produit-matiere">Or rose 18 carats · Saphir</p>
+        <p class="produit-prix">890 €</p>
+        <div class="produit-action"><span>Découvrir</span></div>
+      </div>
+
+      <div class="produit-card reveal" style="transition-delay:.2s">
+        <div class="produit-img-wrap">
+          <div class="produit-visual">
+            <svg viewBox="0 0 200 200" width="160" height="160">
+              <defs><radialGradient id="g4" cx="50%" cy="30%" r="60%">
+                <stop offset="0%"   stop-color="#e8d5a3" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.1"/>
+              </radialGradient></defs>
+              <ellipse cx="100" cy="140" rx="50" ry="14" fill="rgba(201,168,76,0.05)" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+              <polygon points="100,55 128,90 118,130 82,130 72,90" fill="rgba(201,168,76,0.08)" stroke="url(#g4)" stroke-width="2"/>
+              <line x1="100" y1="55" x2="82"  y2="90" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+              <line x1="100" y1="55" x2="128" y2="90" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+              <line x1="82"  y1="90" x2="118" y2="90" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+              <circle cx="100" cy="55"  r="7" fill="rgba(201,168,76,0.4)"  stroke="#c9a84c"              stroke-width="1.5"/>
+              <circle cx="82"  cy="90"  r="4" fill="rgba(201,168,76,0.2)"  stroke="rgba(201,168,76,0.5)"  stroke-width="1"/>
+              <circle cx="118" cy="90"  r="4" fill="rgba(201,168,76,0.2)"  stroke="rgba(201,168,76,0.5)"  stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="produit-badge new">Nouveau</span>
+        </div>
+        <p class="produit-chapitre">Chapitre IV — Le Silence</p>
+        <h3 class="produit-name">Boucles "Écho"</h3>
+        <p class="produit-matiere">Or blanc 18 carats · Diamants</p>
+        <p class="produit-prix">760 €</p>
+        <div class="produit-action"><span>Découvrir</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="parallax-sep"></div>
+
+<section id="film">
+  <div class="film-inner">
+    <p class="section-label reveal">Hero Content</p>
+    <div class="film-layout">
+
+      <div class="reveal-left">
+        <div class="film-screen">
+          <div class="film-screen-inner">
+            <div class="film-play" id="playBtn"></div>
+          </div>
+          <span class="film-timecode">00:00:00:00</span>
+          <span class="film-format">60'' · 4K · FR</span>
+          <div class="film-progress"><div class="film-progress-bar"></div></div>
+        </div>
+        <div class="film-steps">
+          <div class="film-step"><div class="step-num">01</div><div class="step-name">Promesse</div></div>
+          <div class="film-step"><div class="step-num">02</div><div class="step-name">Amour</div></div>
+          <div class="film-step"><div class="step-num">03</div><div class="step-name">Dispute</div></div>
+          <div class="film-step"><div class="step-num">04</div><div class="step-name">Silence</div></div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <h2 class="section-heading">Le film<br><span class="or">publicitaire</span></h2>
+        <p class="film-description">
+          Un film de 01heure et 53secondes. Sept actes. Une seule vérité.
+          Guidé par la musique d'Andor — Robin Notte, le film traverse toutes les émotions
+          d'une relation : de la douceur du début à la renaissance finale.
+        </p>
+        <div class="film-voix">
+          <p class="film-voix-label">✦ Extrait — Voix-off</p>
+          <p class="film-voix-text">
+            "Certaines histoires commencent par un simple instant…<br>
+            …et certaines promesses se réécrivent pour toujours."
+          </p>
+        </div>
+        <div style="margin-top:36px;display:flex;gap:16px;flex-wrap:wrap">
+          <button class="btn-or"><span>Voir le film complet</span></button>
+          <button class="btn-ghost">Coulisses</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="closing-quote">
+  <p class="closing-text reveal">
+    "Nous n'avons pas créé une campagne sur l'amour.<br>
+    Nous avons créé une campagne sur <em>la vérité de l'amour</em>."
+  </p>
+</div>
+
+<div class="parallax-sep"></div>
+
+<section id="communaute">
+  <div class="section-inner">
+    <div class="community-layout">
+
+      <div class="reveal-left">
+        <p class="section-label">Communauté</p>
+        <div class="hashtag-big">#Toujours<br>Nous</div>
+        <p class="community-desc">
+          Partagez votre chapitre. Chaque histoire est unique,
+          chaque bijou en est le témoin silencieux.
+          La campagne devient collective.
+        </p>
+        <div class="community-cta">
+          <button class="btn-or"><span>Partager mon histoire</span></button>
+        </div>
+      </div>
+
+      <div class="community-posts reveal-right">
+        <div class="community-post"><div class="community-post-visual cp1"></div><div class="community-post-overlay"><span class="post-heart">♥</span></div></div>
+        <div class="community-post"><div class="community-post-visual cp2"></div><div class="community-post-overlay"><span class="post-heart">♥</span></div></div>
+        <div class="community-post"><div class="community-post-visual cp3"></div><div class="community-post-overlay"><span class="post-heart">♥</span></div></div>
+        <div class="community-post"><div class="community-post-visual cp4"></div><div class="community-post-overlay"><span class="post-heart">♥</span></div></div>
+        <div class="community-post"><div class="community-post-visual cp5"></div><div class="community-post-overlay"><span class="post-heart">♥</span></div></div>
+        <div class="community-post"><div class="community-post-visual cp6"></div><div class="community-post-overlay"><span class="post-heart">♥</span></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="parallax-sep"></div>
+<section id="newsletter">
+  <div class="newsletter-inner">
+    <p class="section-label reveal" style="justify-content:center">Newsletter</p>
+    <h2 class="newsletter-title reveal">Soyez les premiers<br>à vivre chaque chapitre.</h2>
+    <p class="newsletter-sub reveal">Chaque lundi, un nouveau chapitre. Avant tout le monde.</p>
+    <div class="newsletter-form reveal">
+      <input type="email" class="newsletter-input" placeholder="votre@email.com">
+      <button class="newsletter-btn">Rejoindre</button>
+    </div>
+    <p class="newsletter-note reveal">
+      En vous inscrivant, vous acceptez de recevoir des communications de CLEOR.
+      Désabonnement à tout moment.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">CLEOR</span>
+      <p class="footer-tagline">"Un bijou pour chaque chapitre."<br>Campagne Toujours Nous — 2025</p>
+    </div>
+    <div class="footer-col">
+      <h5>La Campagne</h5>
+      <ul>
+        <li><a href="#">Les Chapitres</a></li>
+        <li><a href="#">Le Film</a></li>
+        <li><a href="#">Direction Artistique</a></li>
+        <li><a href="#">Coulisses</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Collection</h5>
+      <ul>
+        <li><a href="#">Nouveautés</a></li>
+        <li><a href="#">Colliers</a></li>
+        <li><a href="#">Bagues</a></li>
+        <li><a href="#">Boucles d'oreilles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>CLEOR</h5>
+      <ul>
+        <li><a href="#">Nos boutiques</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 CLEOR. Tous droits réservés.</p>
+    <div class="footer-socials">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <p class="modal-chapitre" id="modalChap"></p>
+    <h2 class="modal-title"   id="modalTitle"></h2>
+    <p class="modal-text"     id="modalText"></p>
+    <div class="modal-actions">
+      <button class="btn-or"><span>Voir la collection</span></button>
+      <button class="btn-ghost" onclick="closeModal()">Fermer</button>
+    </div>
+  </div>
+</div>
+<script>
+const cursor     = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+(function animCursor() {
+  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+  cursorRing.style.left = rx + 'px'; cursorRing.style.top = ry + 'px';
+  requestAnimationFrame(animCursor);
+})();
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const obs = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1 }
+);
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+
+function getNextMonday() {
+  const d = new Date(); const day = d.getDay();
+  d.setDate(d.getDate() + ((8 - day) % 7 || 7));
+  d.setHours(9, 0, 0, 0); return d;
+}
+function tick() {
+  const diff = getNextMonday() - new Date();
+  if (diff <= 0) return;
+  document.getElementById('days').textContent    = String(Math.floor(diff / 86400000)).padStart(2, '0');
+  document.getElementById('hours').textContent   = String(Math.floor(diff % 86400000 / 3600000)).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(Math.floor(diff % 3600000  / 60000)).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(Math.floor(diff % 60000    / 1000)).padStart(2, '0');
+}
+setInterval(tick, 1000); tick();
+
+const chapitreData = {
+  ch1: { chapitre: '✦ Chapitre I — La Promesse',  title: 'La Promesse', text: 'Là où tout commence. Un regard qui dure une seconde de trop. Une décision silencieuse qui change tout. Le premier bijou n\'est pas un cadeau — c\'est une déclaration. CLEOR accompagne ce moment fragile avec une collection dédiée aux premières fois.' },
+  ch2: { chapitre: '✦ Chapitre II — L\'Amour',     title: 'L\'Amour',    text: 'La douceur des jours qui se ressemblent. La sécurité d\'un prénom dans la bouche. Le bijou devient le témoin silencieux de la routine précieuse. Une collection pour ceux qui savent que l\'amour véritable ressemble à une lumière constante, pas à un feu d\'artifice.' },
+  ch3: { chapitre: '✦ Chapitre III — La Dispute',  title: 'La Dispute',  text: 'Le chaos et la tension. Les mots qu\'on ne voulait pas dire. Ce que l\'on garde malgré tout — au creux de la main, autour du cou. La collection "Fracture" capture cette beauté brute : les fissures qui rendent les choses plus vraies.' },
+  ch4: { chapitre: '★ En cours — Chapitre IV — Le Silence', title: 'Le Silence', text: 'Le vide entre deux êtres qui s\'aiment encore. Ce que le bijou retient quand les mots manquent. C\'est dans l\'absence que l\'on mesure la présence. La nouvelle collection du Chapitre IV est maintenant disponible — des pièces conçues pour ceux qui parlent sans paroles.' }
+};
+function openModal(id) {
+  const d = chapitreData[id]; if (!d) return;
+  document.getElementById('modalChap').textContent  = d.chapitre;
+  document.getElementById('modalTitle').textContent = d.title;
+  document.getElementById('modalText').textContent  = d.text;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOnBg(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+let tc = 0;
+setInterval(() => {
+  tc += 0.5;
+  const el = document.querySelector('.film-timecode');
+  if (el) el.textContent = `00:${String(Math.floor(tc/60%60)).padStart(2,'0')}:${String(Math.floor(tc%60)).padStart(2,'0')}:${String(Math.floor((tc*24)%24)).padStart(2,'0')}`;
+}, 500);
+
+document.getElementById('playBtn').addEventListener('click', function () {
+  this.style.background = 'rgba(201,168,76,0.3)';
+  setTimeout(() => { this.style.background = 'rgba(201,168,76,0.05)'; }, 300);
+});
+</script>
+
+</body>
+</html>
